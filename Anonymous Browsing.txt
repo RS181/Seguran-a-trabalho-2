@@ -15,9 +15,14 @@ Send your labs professor a signed e-mail message
     PERGUNTAR AO PROFESSOR DA PRÁTICAS!!! 
 
     Posso usar a chave publica do Mailvelope ?
-        Se sim , basta mandar o outlook via web e usar
+        Se sim , basta mandar mensagem atraves outlook via web e usar
         o Mailvelope e fazer apenas signed da chave publica  
-        (link em abaixo) e respetiva resposta.
+        (link em abaixo) e respetiva resposta (fazer DEMO
+        com membro de grupo para ver se funciona). 
+
+        Se não , como é suposto fazer? (se for com o que tem 
+        na ficha 3 , precisso de ajuda porque esta a dar-me 
+        erro com o certificado ao enviar)
 
     Link com a chave publica do Mailvelope
     https://keys.mailvelope.com/pks/lookup?op=get&search=up202109728@edu.fc.up.pt
