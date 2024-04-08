@@ -1,0 +1,24 @@
+Anonymous Browsing
+Can you explain what is happening?
+    Mostra diferentes Ip's (isto tem haver com o o funcionamento 
+    do Tor , que garante anonimidade ao utilizador)
+
+    dar uma resposta mais concreta usando informação
+    do link abaixo ( e se econtrar mais informação adicionar)
+
+    https://nordvpn.com/pt/blog/is-tor-safe/
+
+Send your labs professor a signed e-mail message
+(with your public key in it) and with a brief explanation of what happened. The email message subject should be
+“Anonymous Browsing Experiment”. The email must be sent from your official UP student email account.
+
+    PERGUNTAR AO PROFESSOR DA PRÁTICAS!!! 
+
+    Posso usar a chave publica do Mailvelope ?
+        Se sim , basta mandar o outlook via web e usar
+        o Mailvelope e fazer apenas signed da chave publica  
+        (link em abaixo) e respetiva resposta.
+
+    Link com a chave publica do Mailvelope
+    https://keys.mailvelope.com/pks/lookup?op=get&search=up202109728@edu.fc.up.pt
+

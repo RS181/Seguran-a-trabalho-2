@@ -1,0 +1,34 @@
+VPNs are the killer application of IPSec. They allow you to establish a protected connection to internal computers/servers over public networks, without exposing internal computers/servers to the Internet at large. They are also
+relevant for privacy by encrypting your traffic and hiding your online identity.
+
+1 - Install an OpenVPN server into your group server spXX machine.
+TODO (precissamos de fazer folha4 , se sim indicar que não consegui aceder a VM .Se não
+perguntar como devemos aceder a spXX machine)
+
+2 - Configure OpenVPN as a Linux service to start at system boot.
+TODO 
+
+3 - Configure the OpenVPN server to accept connections from clients identified by a username and password.
+TODO 
+
+4 - Configure a client to authenticate to the OpenVPN server with username and password. Try to connect to the
+server (establish a VPN tunnel).
+TODO 
+
+5 - Configure the OpenVPN server to accept connections from clients identified by a X.509 certificate.
+TODO 
+
+6 - Configure a client to authenticate with a X.509 certificate issued by you.
+TODO
+
+7 - Assignment #2: Items 1,2 and 3 is to be done within your working group as a group effort. Items 4,5 and 6 is
+to be done individually.
+TODO
+
+
+(Fazer isto atraves do Mailvelope , via outlook web)
+Send your labs class professor a signed e-mail message, with a small PDF report attached, explaining all the
+configuration parameters you had to tweak on the client and server side, to make your OpenVPN connection work
+as intended. If possible include into your report some screen shots of all the steps involved in the configuration. The
+email message subject should be “OpenVPN configuration”. The email must be sent from your official UP student
+email account.
