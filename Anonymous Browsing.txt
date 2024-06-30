@@ -1,0 +1,93 @@
+Anonymous Browsing
+Can you explain what is happening?
+    ---------------- Explicação do Tor ---------------
+        O que ocorre é o seguinte:
+    -> Tor browser : De uma forma resumida demonstra o Ip publico diferente do ip publico da minha rede local , 
+    visto que o proprio browser utiliza ferramentas , como o Onion routing ,  que permite ao utlizador ter anonimidade ao navegar pela 
+    internet.
+
+        O tor browser utiliza o conceito de Onion routing , em  que basicamente 
+    criamos uma conexão entre origem e destino atraves de uma serie de nós , 
+    que pertencem a rede de "anonimização" e são mantidos por voluntarios .Cada nó nessa conexão
+    contribui com uma camada de proteção  , em que a passagem por esse nó 
+    remove a respetiva camada de proteção associada .
+        O objetivo  é  ocultar o conteudo do mensagem (incluindo a origem) por um atacante presente em qualquer 
+    ponto dessa conexão. No paragrafo seguinte tenho um exemplo de uma possivel comunicação usando Onion routing.
+        Suponhamos que queremos aceder a www.amazon.com , e que nesse processo queremos manter anonimidade.Para 
+    tal podemos usar browser Tor. Para isto ser possivel ,o dispositivo tem de contactar o respetivo servidor que
+    fornece a pagina principal de www.amazon.com , de uma forma não direta.Para tal , realiza a conexão atraves de 
+    3 nós (na realidade são mais , mas escolhemos apenas 3 para simplificar) , que pertencem a rede de anonimidade.Assim 
+    impedimos que a comunicação entre o nosso dispositivo e o servidor com pagina inicial de www.amazon.com seja rastreada.
+
+        Passo 1 ) O dispositivo (cliente) tem acesso a todas as chaves de encriptação K1,K2 e K3 , que utiliza para
+        encriptar a mensagem tres vezes  (pedido GET), ficando com 3 camadas (que devem ser retiradas uma a uma).
+
+        Passo 2 ) A mensagem encriptada 3 vezes , é enviada para para  nó 1 (nó input).
+
+        Passo 3 ) Nó 1 só tem o endereço do nó 2 e K1 .Logo faz a desencriptação da mensagem usando K1 e apercebe-se
+        de que existem mais camadas de encriptação presentes.Face a  situação passa a mensagem para nó 2.
+
+        Passo 4 ) Nó 2 tem K2 e o endereço de nó 1 (input)  e nó 3 (output).Portanto faz a desencriptação da mensagem
+        com K2 e verifica que a mensagem continua encriptada .Face a situação passa a mensagem para nó 3 (ouptut) 
+
+        Passo 5 ) Nó 3 remove a ultima camada de encriptação e encontra o pedido GET para www.amazon.com.Este é passado 
+        para o respetivo servidor destino.
+
+        Passo 6 ) O servidor processa o pedido e responde com a respetiva pagina web.
+
+        Passo 7 ) A resposta passa por os mesmos nós  , na direção oposta  , onde cada nó coloca uma camada de encriptação
+        usando a sua respetiva chave Ki.
+
+        Passo 8 ) A mensagem chega ao cliente (com a tripla encriptação) , que pode ser devidamente desencriptada 
+        visto que o cliente tem a todas as chaves.
+
+        Tendo o conta o exemplo dado acima e supondo temos um atacante presente no  :
+
+            Nó 1 (input) -> o máximo que esse atacante podia saber era que o nó 1 tem a mensagem encriptada 3 vezes (na realidade não 
+        iria descobrir nada)
+
+            Nó 2 (intermédio) -> a primeira vista , poderia indicar que o atacante teria acesso ao endereço do cliente e servidor destino . Mas na 
+        realidade isto não é tão simples , visto que na realidade existem centenas de conexões concorrentes , e desta forma 
+        é muito dificl para o atacante indicar qual dessas conexões corresponde a "original".
+
+            Nó 3 (output) : acontece algo semelhante ao nó 1 , o atacante apenas fica a saber que um servidor está a contactar
+        outro servidor. Não consegue rastrear o cliente  e a origem do pedido .
+
+    ---------------- Fim da Explicação do Tor ---------------
+    ---------------- Explicação da assinatura digital ---------------
+        
+        ---------- ATUALIZAR A EXPLICAÇÃO DA PARTE DE ASSINATURA  !!!!!  ---------
+
+        No que consta a realização da assinatura digital para autenticar o email , eu utilizei a Kleopatra , que permitiu
+        gerar o par de chaves publico/privado.Por sua vez , com a chave privada pude assinar digitalmente o email.
+        1) Integridade da mensagem (utilizando funções de hash nos algoritmos de  assinatura e verificação )
+        2) Autenticação da mensagem (possivel utilizando a chave publica que envio por anexo)
+        3) Não repudio da mensagem
+
+    ---------------- Fim da Explicação da assinatura digital ---------------
+
+
+Send your labs professor a signed e-mail message
+(with your public key in it) and with a brief explanation of what happened. The email message subject should be
+“Anonymous Browsing Experiment”. The email must be sent from your official UP student email account.
+
+    PERGUNTAR AO PROFESSOR DA PRÁTICAS!!! 
+
+    Posso usar a chave publica do Mailvelope ?
+        Se sim , basta mandar mensagem atraves outlook via web e usar
+        o Mailvelope e fazer apenas signed da chave publica  
+        (link em abaixo) e respetiva resposta (fazer DEMO
+        com membro de grupo para ver se funciona). 
+
+        Se não , como é suposto fazer? (se for com o que tem 
+        na ficha 3 , precisso de ajuda porque esta a dar-me 
+        erro com o certificado ao enviar)
+
+               R: Posso fazer o sign com o Mailvelope e tenho que enviar como anexo a chave publica 
+    do Mailvelope (link abaixo)
+
+    Link com a chave publica do Mailvelope
+    https://keys.mailvelope.com/pks/lookup?op=get&search=up202109728@edu.fc.up.pt
+
+
+
